@@ -190,10 +190,6 @@ export function getThemeDefaultWallpaperId(
     'sakura-night': 'sakura-night',
     'mt-fuji-sunset': 'mt-fuji-sunset',
     'purple-gradient': 'minimal-gradient-purple',
-    'japanese-temple': 'japanese-temple',
-    'kyoto-garden': 'kyoto-garden',
-    'bamboo-forest': 'bamboo-forest',
-    'torii-gate': 'torii-gate',
   };
   return themeWallpaperMap[themeId];
 }
@@ -364,34 +360,6 @@ const baseThemeSets: BaseThemeGroup[] = [
         mainColor: 'oklch(100% 0 0)',
         secondaryColor: 'oklch(90% 0 0)',
         wallpaperId: 'minimal-gradient-purple',
-      },
-      {
-        id: 'japanese-temple',
-        backgroundColor: 'oklch(0% 0 0 / 0.95)',
-        mainColor: 'oklch(100% 0 0)',
-        secondaryColor: 'oklch(85% 0 0)',
-        wallpaperId: 'japanese-temple',
-      },
-      {
-        id: 'kyoto-garden',
-        backgroundColor: 'oklch(0% 0 0 / 0.95)',
-        mainColor: 'oklch(100% 0 0)',
-        secondaryColor: 'oklch(85% 0 0)',
-        wallpaperId: 'kyoto-garden',
-      },
-      {
-        id: 'bamboo-forest',
-        backgroundColor: 'oklch(0% 0 0 / 0.95)',
-        mainColor: 'oklch(100% 0 0)',
-        secondaryColor: 'oklch(85% 0 0)',
-        wallpaperId: 'bamboo-forest',
-      },
-      {
-        id: 'torii-gate',
-        backgroundColor: 'oklch(0% 0 0 / 0.95)',
-        mainColor: 'oklch(100% 0 0)',
-        secondaryColor: 'oklch(85% 0 0)',
-        wallpaperId: 'torii-gate',
       },
     ],
   },
