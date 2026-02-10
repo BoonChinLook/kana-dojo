@@ -698,7 +698,8 @@
       "Asahi",
       "Fuji TV"
     ],
-    "correctIndex": 0
+    "correctIndex": 0,
+    "completed": true
   },
   {
     "id": 55,
@@ -710,7 +711,8 @@
       "Shikoku",
       "Hokkaido"
     ],
-    "correctIndex": 0
+    "correctIndex": 0,
+    "completed": true
   },
   {
     "id": 56,
@@ -722,7 +724,8 @@
       "Buckwheat",
       "Seaweed"
     ],
-    "correctIndex": 0
+    "correctIndex": 0,
+    "completed": true
   },
   {
     "id": 57,
@@ -734,7 +737,8 @@
       "Niigata",
       "Sendai"
     ],
-    "correctIndex": 0
+    "correctIndex": 0,
+    "completed": true
   },
   {
     "id": 58,
@@ -746,7 +750,8 @@
       "Kodo",
       "Origami"
     ],
-    "correctIndex": 0
+    "correctIndex": 0,
+    "issued": true
   },
   {
     "id": 59,
