@@ -1,7 +1,8 @@
 'use client';
 import { useCallback } from 'react';
-import { statsApi, achievementApi } from '@/shared/events';
+import { achievementApi } from '@/shared/events';
 import { useStatsDisplay } from '@/features/Progress';
+import useStatsStore from '@/features/Progress/store/useStatsStore';
 
 /**
  * Stats Hook - Compatibility layer for existing code
@@ -13,45 +14,34 @@ import { useStatsDisplay } from '@/features/Progress';
  */
 const useStats = () => {
   const { characterHistory } = useStatsDisplay();
+  const statsStore = useStatsStore();
 
   // Compatibility wrappers for old API
   const incrementCorrectAnswers = useCallback(() => {
-    // Legacy method - new code should use statsApi.recordCorrect()
-    console.warn(
-      'useStats().incrementCorrectAnswers() is deprecated. Use statsApi.recordCorrect() instead.',
-    );
+    statsStore.incrementCorrectAnswers();
     // Trigger achievement check
     achievementApi.triggerCheck();
-  }, []);
+  }, [statsStore]);
 
   const incrementWrongAnswers = useCallback(() => {
-    // Legacy method - new code should use statsApi.recordIncorrect()
-    console.warn(
-      'useStats().incrementWrongAnswers() is deprecated. Use statsApi.recordIncorrect() instead.',
-    );
+    statsStore.incrementWrongAnswers();
     // Trigger achievement check
     achievementApi.triggerCheck();
-  }, []);
+  }, [statsStore]);
 
   const addCharacterToHistory = useCallback((character: string) => {
-    console.warn(
-      'useStats().addCharacterToHistory() is deprecated. Character history is now managed automatically via statsApi events.',
-    );
-  }, []);
+    statsStore.addCharacterToHistory(character);
+  }, [statsStore]);
 
   const addCorrectAnswerTime = useCallback((time: number) => {
-    console.warn(
-      'useStats().addCorrectAnswerTime() is deprecated. Use statsApi metadata instead.',
-    );
-  }, []);
+    statsStore.addCorrectAnswerTime(time);
+  }, [statsStore]);
 
   const incrementCharacterScore = useCallback(
     (character: string, field: 'correct' | 'wrong') => {
-      console.warn(
-        'useStats().incrementCharacterScore() is deprecated. Character scoring is now managed automatically via statsApi events.',
-      );
+      statsStore.incrementCharacterScore(character, field);
     },
-    [],
+    [statsStore],
   );
 
   return {
